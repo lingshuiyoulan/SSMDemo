@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "text": "My Documents",
+    "state":"open",
+    "children": [
+      {
+        "id": 11,
+        "text": "Photos",
+        "attributes": {
+          "p1": "Custom Attribute1",
+          "p2": "Custom Attribute2"
+        }
+      },
+      {
+        "id": 15,
+        "text": "welcome.html",
+        "attributes": {
+          "p1": "Custom Attribute1",
+          "p2": "Custom Attribute2"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "My Documents",
+    "state":"closed",
+    "children": [
+      {
+        "id": 11,
+        "text": "Photos",
+        "attributes": {
+          "p1": "Custom Attribute1",
+          "p2": "Custom Attribute2"
+        }
+      },
+      {
+        "id": 15,
+        "text": "welcome.html",
+        "attributes": {
+          "p1": "Custom Attribute1",
+          "p2": "Custom Attribute2"
+        }
+      }
+    ]
+  }
+]
