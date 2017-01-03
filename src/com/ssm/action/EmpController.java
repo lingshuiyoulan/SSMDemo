@@ -1,6 +1,5 @@
 package com.ssm.action;
 
-import com.alibaba.fastjson.JSON;
 import com.ssm.domain.AuthAndGroup;
 import com.ssm.domain.Emp;
 import com.ssm.domain.json.Menu;
@@ -8,10 +7,9 @@ import com.ssm.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,7 +34,8 @@ public class EmpController {
     }
 
     @RequestMapping("/json")
-    public void json(String empId, HttpServletResponse response) throws IOException {
+    @ResponseBody
+    public  List<Menu> json(String empId) {
 
 
 
@@ -80,10 +79,6 @@ public class EmpController {
             mainMenu.setAttributes(map);
             menuList.add(mainMenu);
         }
-
-        String json = JSON.toJSONString(menuList);
-        response.setContentType("text/json;charset=utf-8");
-        response.setCharacterEncoding("utf-8");
-        response.getWriter().write(json);
+        return menuList;
     }
 }
