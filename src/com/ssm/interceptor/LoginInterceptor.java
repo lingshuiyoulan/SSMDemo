@@ -12,7 +12,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
 
-        if (o.toString().contains("login"))
+        /*if (o.toString().contains("login"))
             return true;
 
         HttpSession session = httpServletRequest.getSession(false);
@@ -24,7 +24,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (user == null) {
             httpServletRequest.getRequestDispatcher("/login.jsp").forward(httpServletRequest, httpServletResponse);
             return false;
-        }
+        }*/
 
         return true;
     }

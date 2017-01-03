@@ -97,7 +97,7 @@
         select
         <include refid="Base_Column_List"/>
         from tb_user
-        WHERE name = #{name,jdbcType=VARCHAR} and password = #{pass,jdbcType=VARCHAR}
+        WHERE name = #{name} and password = #{pass}
     </select>
 
     <select id="selectByPage" resultType="com.ssm.domain.User" parameterType="com.ssm.utils.PageBean">
